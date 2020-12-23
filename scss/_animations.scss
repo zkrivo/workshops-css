@@ -1,0 +1,43 @@
+@keyframes show {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  100% {
+    right: -100px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes show {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes show {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}

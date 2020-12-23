@@ -1,0 +1,25 @@
+.fa-shopping-cart {
+  font-size: 1.5rem;
+  padding-top: 10px;
+}
+
+.fa-circle {
+  color: $cart_not_empty;
+}
+
+.fa-arrow-left {
+  font-size: 26px;
+  margin-right: 8px;
+}
+
+.far,
+.fa,
+.fas {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1490px) {
+  .fa-arrow-left {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,193 @@
+.body-workshops {
+  display: flex;
+  margin-top: 60px;
+
+  p {
+    color: $light_text;
+    font-size: 14px;
+  }
+}
+
+.column-categories {
+  flex: 20%;
+  //border: 1px solid black;
+  padding-top: 30px;
+  padding-left: 20px;
+
+  a {
+    color: $text;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      color: $title_category_clicked;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    .fas {
+      padding-right: 10px;
+    }
+
+    li {
+      padding-top: 20px;
+    }
+
+    .all-category {
+      padding-left: 26px;
+    }
+  }
+}
+
+.column-workshops {
+  flex: 70%;
+  //border: 1px solid black;
+  //   margin-left: 10px;
+
+  span {
+    color: $text;
+  }
+
+  .grid-list {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 450px 450px 450px 40px;
+
+    .load-more {
+      color: $text;
+      border-bottom: 3px solid $title_category_clicked;
+      width: 72px;
+      padding-top: 10px;
+      //   text-decoration: underline;
+      //   text-decoration-color: $title_category_clicked;
+      //   text-decoration-style: solid;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.workshop-card {
+  border: 1px solid #f2f2f2;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+
+  &:hover {
+    @include box-shadow(1px, 2px, 16px, $shadow);
+  }
+
+  .workshop-image {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 180px;
+  }
+
+  .icon-container {
+    width: 40px;
+    height: 40px;
+    background-color: $text;
+    color: white;
+    text-align: center;
+    margin-top: -20px;
+    //z-index: 4;
+    position: absolute;
+    margin-left: 230px;
+    font-size: 22px;
+    padding: 5px;
+    border-radius: 6px;
+  }
+
+  .workshop-details {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  .date-time {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+    p {
+      padding-right: 16px;
+      padding-left: 6px;
+      color: $text;
+    }
+  }
+
+  h3 {
+    font-size: 22px;
+    color: $title_category_clicked;
+  }
+
+  .title-price {
+    .pricing,
+    p {
+      color: $text;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:visited {
+        text-decoration: none;
+      }
+    }
+
+    .price-tab {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      p {
+        margin-top: 8px;
+        padding-left: 6px;
+      }
+    }
+  }
+
+  .btn-container {
+    margin-top: 19px;
+  }
+
+  .btn-cart {
+    width: 100%;
+    padding: 13.5px 70.5px;
+    border: none;
+    font-size: 16px;
+    background-color: $header_color;
+    border-radius: 6px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1590px) {
+  .grid-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .workshop-details {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .workshop-image {
+    width: 100%;
+  }
+
+  .btn-cart {
+    width: 70%;
+  }
+
+  .column-categories {
+    padding-top: 10px;
+  }
+}

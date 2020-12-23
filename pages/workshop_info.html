@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@700&display=swap" rel="stylesheet">
+    <title>Workshop Info</title>
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <a href="index.html"><img class="logo" src="../images/logo_tinel.svg" alt="Tinel Workshops Logo"></a>
+            <div class="cart-status">
+                <div class="cart-icons">
+                    <button class="open-cart" onclick="openCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                    <i class="fas fa-circle"></i>
+    
+                </div>
+                <p class="cart-msg">Cart is Empty</p>
+            </div>
+        </nav>
+    </header>
+
+    <!-- modal for checking out and paying -->
+<div class="modal-cart">
+    <div class="close-cart" onclick="closeCart()">
+        <i class="fas fa-times"></i>
+    </div>
+    <!-- <h2>here is modal</h2> -->
+    <p class="cart-status-msg">Cart is Empty</p>
+    <div class="parent-div">
+        <div class="mini-workshop">
+            <div>
+                <img src="https://images.hdqwalls.com/wallpapers/colorful-movements-of-abstract-art-4k-r2.jpg"
+                    alt="Abstract art">
+            </div>
+            <div class="cart-workshop-details">
+                <div class="info-title">
+                    <h3>Interaction Design Workshop</h3>
+                    <i class="far fa-trash-alt"></i>
+                </div>
+                <div class="info-price">
+                    <select name="amount" id="mini-select">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                    <h3 class="euro-price">495,00 EUR</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="checkout-modal"></div>
+
+    <div class="body-workshops">
+        <div class="column-categories">
+            <div class="go-back">
+                <a href="index.html"><i class="fas fa-arrow-left"></i></a>
+                <a href="index.html"><p>Natrag</p></a>
+            </div>
+        </div>
+        <div class="column-workshops">
+            <div class="full-image">
+                <img class="big-image" src="https://images.hdqwalls.com/wallpapers/colorful-movements-of-abstract-art-4k-r2.jpg"
+                    alt="Abstract art">
+            </div>
+            <div class="info-workshop-body">
+                <div class="workshop-summary">
+                    <div class="date-details">
+                        <div class="date-time">
+                            <div class="icon-container">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <i class="far fa-calendar-minus"></i>
+                            <p>Sub 27.06.2020.</p>
+                            <i class="far fa-clock"></i>
+                            <p>09:00h</p>
+                        </div>
+                        <div class="about-workshop">
+                            <h1>Interaction Desing Workshop</h1>
+                            <div class="person-info">
+                                <p>WITH</p>
+                                <h3>Marko Maljković</h3>
+                            </div>
+                            <p class="lorem-ipsum">
+                                What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been
+                                the
+                                industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it
+                                to
+                                make a type specimen book it has?
+                            </p>
+                            <p class="lorem-ipsum second">
+                                What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been
+                                the
+                                industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it
+                                to
+                                make a type specimen book it has?
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tickets-tab">
+                    <p class="buy">Buy Your Ticket</p>
+                    <div>
+                        <h1>495,00</h1>
+                        <p class="currency">EUR</p>
+                    </div>
+                    <div>
+                        <select name="amount" id="amount">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                        <div class="btn-info-add">
+                            <button onclick="ticketsNumber()">Add To Cart</button>
+                        </div>
+                    </div>
+                    <p class="subtotal">Subtotal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="recommended">
+        <h1>Similar Workshops</h1>
+        <div class="recom-container">
+            <div class="workshop-card">
+                <div class="img-container">
+                    <a href="workshop_info.html"><img class="workshop-image"
+                            src="https://images.hdqwalls.com/wallpapers/colorful-movements-of-abstract-art-4k-r2.jpg"
+                            alt="Abstract art"></a>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="workshop-details">
+                    <div class="date-time">
+                        <i class="far fa-calendar-minus"></i>
+                        <p>27.06.2020.</p>
+                        <i class="far fa-clock"></i>
+                        <p>09:00h</p>
+                    </div>
+                    <div class="title-price">
+                        <a href="workshop_info.html">
+                            <h3>Interaction Design Workshop</h3>
+                        </a>
+                        <div class="price-tab">
+                            <h3 class="pricing">495,00</h3>
+                            <p>EUR</p>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn-cart" onclick="updateCart()">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="workshop-card">
+                <div class="img-container">
+                    <a href="workshop_info.html"><img class="workshop-image"
+                            src="https://images.hdqwalls.com/wallpapers/colorful-movements-of-abstract-art-4k-r2.jpg"
+                            alt="Abstract art"></a>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="workshop-details">
+                    <div class="date-time">
+                        <i class="far fa-calendar-minus"></i>
+                        <p>27.06.2020.</p>
+                        <i class="far fa-clock"></i>
+                        <p>09:00h</p>
+                    </div>
+                    <div class="title-price">
+                        <a href="workshop_info.html">
+                            <h3>Interaction Design Workshop</h3>
+                        </a>
+                        <div class="price-tab">
+                            <h3 class="pricing">495,00</h3>
+                            <p>EUR</p>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn-cart" onclick="updateCart()">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="workshop-card">
+                <div class="img-container">
+                    <a href="workshop_info.html"><img class="workshop-image"
+                            src="https://images.hdqwalls.com/wallpapers/colorful-movements-of-abstract-art-4k-r2.jpg"
+                            alt="Abstract art"></a>
+                </div>
+                <div class="icon-container">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="workshop-details">
+                    <div class="date-time">
+                        <i class="far fa-calendar-minus"></i>
+                        <p>27.06.2020.</p>
+                        <i class="far fa-clock"></i>
+                        <p>09:00h</p>
+                    </div>
+                    <div class="title-price">
+                        <a href="workshop_info.html">
+                            <h3>Interaction Design Workshop</h3>
+                        </a>
+                        <div class="price-tab">
+                            <h3 class="pricing">495,00</h3>
+                            <p>EUR</p>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn-cart" onclick="updateCart()">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy TINEL Meetup 2020.
+    </footer>
+    
+    <script src="scripts/index.js"></script>
+</body>
+</html>

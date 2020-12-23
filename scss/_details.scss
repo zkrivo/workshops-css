@@ -1,0 +1,298 @@
+.go-back {
+  display: flex;
+  flex-direction: row;
+
+  p {
+    margin-top: -1px;
+    font-size: 20px;
+    padding-left: 8px;
+    color: $text;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.big-image {
+  border-radius: 8px;
+  height: 382px;
+  width: 98%;
+}
+
+.info-workshop-body {
+  display: flex;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+
+.workshop-summary {
+  flex: 65%;
+  //border: 1px solid black;
+}
+
+.tickets-tab {
+  flex: 35%;
+  //border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  height: 320px;
+  padding-left: 40px;
+  padding-top: 50px;
+
+  .buy {
+    font-size: 20px;
+    color: $text;
+    padding-right: 40px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+
+    .currency {
+      margin-top: 18px;
+      color: $text;
+    }
+
+    select {
+      border: 1px solid #0097cc;
+      border-radius: 8px;
+      margin-top: 30px;
+      width: 55px;
+      height: 45px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    button {
+      margin-left: 11.5px;
+      background-color: $header_color;
+      border: none;
+      padding: 20.5px 42.5px;
+      text-align: center;
+      margin-top: 9px;
+      border-radius: 8px;
+      height: 45px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .subtotal {
+    margin-left: 66px;
+    font-weight: normal;
+  }
+  @include box-shadow(1px, 2px, 16px, $ticket_shadow);
+}
+.date-details {
+  .date-time {
+    display: flex;
+    flex-direction: row;
+    color: black;
+
+    p {
+      color: black;
+    }
+
+    .fa-clock,
+    .fa-calendar-minus,
+    p {
+      margin-top: 10px;
+      margin-left: 6px;
+    }
+
+    .fa-clock {
+      margin-left: 18px;
+    }
+
+    .fa-calendar-minus {
+      margin-left: 18px;
+    }
+
+    .icon-container {
+      width: 40px;
+      height: 40px;
+      background-color: $text;
+      color: white;
+      text-align: center;
+      font-size: 22px;
+      padding: 7px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.about-workshop {
+  margin-top: 27px;
+  h1 {
+    font-size: 52px;
+    color: $title_category_clicked;
+  }
+
+  .lorem-ipsum {
+    margin-top: 20px;
+    font-weight: lighter;
+    line-height: 22px;
+    color: $text;
+  }
+
+  .second {
+    margin-bottom: 80px;
+  }
+}
+
+.person-info {
+  margin-top: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  p,
+  h3 {
+    color: $text;
+  }
+
+  p {
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+}
+
+.recommended {
+  background-color: $recommendations;
+  margin-bottom: 1px;
+
+  h1 {
+    padding-top: 80px;
+    margin-left: 25%;
+    margin-bottom: 40px;
+  }
+}
+
+.recom-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 25%;
+  padding-bottom: 80px;
+
+  .workshop-card {
+    .btn-cart {
+      margin-bottom: 30px;
+    }
+
+    .icon-container {
+      margin-left: 240px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .body-workshops {
+    display: flex;
+    flex-direction: column;
+    margin-top: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    .go-back {
+      p {
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .big-image {
+    width: 100%;
+    height: 250px;
+  }
+
+  .tickets-tab {
+    //display: none;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    z-index: 2;
+    height: 100px;
+    padding: 10px;
+    margin: 0;
+
+    div {
+      margin: 0;
+      bottom: 10px;
+
+      .select {
+        margin-bottom: 30px;
+      }
+    }
+
+    .buy,
+    .subtotal {
+      display: none;
+    }
+  }
+
+  .recommended {
+    h1 {
+      padding-top: 33px;
+      margin-left: 10px;
+    }
+    .recom-container {
+      .workshop-card {
+        display: flex;
+        flex-direction: row;
+        height: 180px;
+
+        .workshop-details {
+          margin-left: 0;
+
+          .btn-cart {
+            display: none;
+          }
+        }
+
+        img {
+          width: 45%;
+        }
+
+        .icon-container {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .date-details {
+    .date-time {
+      .icon-container {
+        display: none;
+      }
+      .fa-clock,
+      .fa-calendar-minus,
+      p {
+        margin-top: 6px;
+      }
+    }
+  }
+  .recom-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .about-workshop {
+    margin-top: 10px;
+
+    .second {
+      margin-bottom: 37px;
+    }
+  }
+}

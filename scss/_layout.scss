@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Livvic", sans-serif;
+}
+
+body header .logo {
+  height: 58px;
+  margin: 20px;
+}
+
+.header-nav {
+  a {
+    width: 15%;
+  }
+}
+
+header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  background-color: $header_color;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-status {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 8; //trying to push cart counter forward when modal opens, not workig
+  margin: 10px 100px 10px;
+  padding-left: 30px;
+  right: 0;
+
+  p {
+    margin-top: 29px;
+    margin-left: 12px;
+  }
+
+  .fa-shopping-cart {
+    margin-top: 18px;
+  }
+
+  .open-cart {
+    border: none;
+    background-color: $header_color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .fa-circle {
+    // margin-top: 0;
+    // margin-left: -10px;
+    position: fixed;
+    top: 34px;
+    right: 260px;
+    display: none;
+  }
+}
+
+footer {
+  background-color: $footer_back;
+  color: $light_text;
+  padding: 22px;
+  padding-left: 40px;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+//@media screen and (max-width: 1590px) {
+// .header-nav {
+//   height: 60px;
+// }
+// body header .logo {
+//   margin: 10px;
+//   height: 40px;
+// }
+
+//   .cart-status {
+//     margin-top: 2px;
+//     margin-right: 16px;
+//     margin-bottom: 20px;
+
+//     p {
+//       margin-left: 5px;
+//     }
+//   }
+//   .cart-status .fa-circle {
+//     display: none;
+//   }
+// }

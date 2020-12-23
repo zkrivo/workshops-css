@@ -1,0 +1,786 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Livvic", sans-serif;
+}
+
+body header .logo {
+  height: 58px;
+  margin: 20px;
+}
+
+.header-nav a {
+  width: 15%;
+}
+
+header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  background-color: #ffce25;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-status {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 8;
+  margin: 10px 100px 10px;
+  padding-left: 30px;
+  right: 0;
+}
+
+.cart-status p {
+  margin-top: 29px;
+  margin-left: 12px;
+}
+
+.cart-status .fa-shopping-cart {
+  margin-top: 18px;
+}
+
+.cart-status .open-cart {
+  border: none;
+  background-color: #ffce25;
+}
+
+.cart-status .open-cart:hover {
+  cursor: pointer;
+}
+
+.cart-status .fa-circle {
+  position: fixed;
+  top: 34px;
+  right: 260px;
+  display: none;
+}
+
+footer {
+  background-color: #d3d3d3;
+  color: #7f7f7f;
+  padding: 22px;
+  padding-left: 40px;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+.body-workshops {
+  display: flex;
+  margin-top: 60px;
+}
+
+.body-workshops p {
+  color: #7f7f7f;
+  font-size: 14px;
+}
+
+.column-categories {
+  flex: 20%;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.column-categories a {
+  color: #1d1d1b;
+  text-decoration: none;
+}
+
+.column-categories a:hover {
+  text-decoration: underline;
+  color: #0097cc;
+}
+
+.column-categories ul {
+  list-style-type: none;
+}
+
+.column-categories ul .fas {
+  padding-right: 10px;
+}
+
+.column-categories ul li {
+  padding-top: 20px;
+}
+
+.column-categories ul .all-category {
+  padding-left: 26px;
+}
+
+.column-workshops {
+  flex: 70%;
+}
+
+.column-workshops span {
+  color: #1d1d1b;
+}
+
+.column-workshops .grid-list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 450px 450px 450px 40px;
+}
+
+.column-workshops .grid-list .load-more {
+  color: #1d1d1b;
+  border-bottom: 3px solid #0097cc;
+  width: 72px;
+  padding-top: 10px;
+}
+
+.column-workshops .grid-list .load-more:hover {
+  cursor: pointer;
+}
+
+.workshop-card {
+  border: 1px solid #f2f2f2;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.workshop-card:hover {
+  box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.35);
+}
+
+.workshop-card .workshop-image {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 180px;
+}
+
+.workshop-card .icon-container {
+  width: 40px;
+  height: 40px;
+  background-color: #1d1d1b;
+  color: white;
+  text-align: center;
+  margin-top: -20px;
+  position: absolute;
+  margin-left: 230px;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+.workshop-card .workshop-details {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.workshop-card .date-time {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.workshop-card .date-time p {
+  padding-right: 16px;
+  padding-left: 6px;
+  color: #1d1d1b;
+}
+
+.workshop-card h3 {
+  font-size: 22px;
+  color: #0097cc;
+}
+
+.workshop-card .title-price .pricing,
+.workshop-card .title-price p {
+  color: #1d1d1b;
+}
+
+.workshop-card .title-price a {
+  text-decoration: none;
+}
+
+.workshop-card .title-price a:visited {
+  text-decoration: none;
+}
+
+.workshop-card .title-price .price-tab {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.workshop-card .title-price .price-tab p {
+  margin-top: 8px;
+  padding-left: 6px;
+}
+
+.workshop-card .btn-container {
+  margin-top: 19px;
+}
+
+.workshop-card .btn-cart {
+  width: 100%;
+  padding: 13.5px 70.5px;
+  border: none;
+  font-size: 16px;
+  background-color: #ffce25;
+  border-radius: 6px;
+}
+
+.workshop-card .btn-cart:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1590px) {
+  .grid-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .workshop-details {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .workshop-image {
+    width: 100%;
+  }
+  .btn-cart {
+    width: 70%;
+  }
+  .column-categories {
+    padding-top: 10px;
+  }
+}
+
+.fa-shopping-cart {
+  font-size: 1.5rem;
+  padding-top: 10px;
+}
+
+.fa-circle {
+  color: #00aae4;
+}
+
+.fa-arrow-left {
+  font-size: 26px;
+  margin-right: 8px;
+}
+
+.far,
+.fa,
+.fas {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1490px) {
+  .fa-arrow-left {
+    font-size: 20px;
+  }
+}
+
+.go-back {
+  display: flex;
+  flex-direction: row;
+}
+
+.go-back p {
+  margin-top: -1px;
+  font-size: 20px;
+  padding-left: 8px;
+  color: #1d1d1b;
+}
+
+.go-back a:hover {
+  text-decoration: none;
+}
+
+.big-image {
+  border-radius: 8px;
+  height: 382px;
+  width: 98%;
+}
+
+.info-workshop-body {
+  display: flex;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+
+.workshop-summary {
+  flex: 65%;
+}
+
+.tickets-tab {
+  flex: 35%;
+  border-radius: 8px;
+  background-color: white;
+  height: 320px;
+  padding-left: 40px;
+  padding-top: 50px;
+  box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.25);
+}
+
+.tickets-tab .buy {
+  font-size: 20px;
+  color: #1d1d1b;
+  padding-right: 40px;
+}
+
+.tickets-tab div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.tickets-tab div .currency {
+  margin-top: 18px;
+  color: #1d1d1b;
+}
+
+.tickets-tab div select {
+  border: 1px solid #0097cc;
+  border-radius: 8px;
+  margin-top: 30px;
+  width: 55px;
+  height: 45px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.tickets-tab div button {
+  margin-left: 11.5px;
+  background-color: #ffce25;
+  border: none;
+  padding: 20.5px 42.5px;
+  text-align: center;
+  margin-top: 9px;
+  border-radius: 8px;
+  height: 45px;
+}
+
+.tickets-tab div button:hover {
+  cursor: pointer;
+}
+
+.tickets-tab .subtotal {
+  margin-left: 66px;
+  font-weight: normal;
+}
+
+.date-details .date-time {
+  display: flex;
+  flex-direction: row;
+  color: black;
+}
+
+.date-details .date-time p {
+  color: black;
+}
+
+.date-details .date-time .fa-clock,
+.date-details .date-time .fa-calendar-minus,
+.date-details .date-time p {
+  margin-top: 10px;
+  margin-left: 6px;
+}
+
+.date-details .date-time .fa-clock {
+  margin-left: 18px;
+}
+
+.date-details .date-time .fa-calendar-minus {
+  margin-left: 18px;
+}
+
+.date-details .date-time .icon-container {
+  width: 40px;
+  height: 40px;
+  background-color: #1d1d1b;
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  padding: 7px;
+  border-radius: 6px;
+}
+
+.about-workshop {
+  margin-top: 27px;
+}
+
+.about-workshop h1 {
+  font-size: 52px;
+  color: #0097cc;
+}
+
+.about-workshop .lorem-ipsum {
+  margin-top: 20px;
+  font-weight: lighter;
+  line-height: 22px;
+  color: #1d1d1b;
+}
+
+.about-workshop .second {
+  margin-bottom: 80px;
+}
+
+.person-info {
+  margin-top: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.person-info p,
+.person-info h3 {
+  color: #1d1d1b;
+}
+
+.person-info p {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.recommended {
+  background-color: #f2f2f2;
+  margin-bottom: 1px;
+}
+
+.recommended h1 {
+  padding-top: 80px;
+  margin-left: 25%;
+  margin-bottom: 40px;
+}
+
+.recom-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 25%;
+  padding-bottom: 80px;
+}
+
+.recom-container .workshop-card .btn-cart {
+  margin-bottom: 30px;
+}
+
+.recom-container .workshop-card .icon-container {
+  margin-left: 240px;
+}
+
+@media screen and (max-width: 700px) {
+  .body-workshops {
+    display: flex;
+    flex-direction: column;
+    margin-top: 17px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .body-workshops .go-back p {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .big-image {
+    width: 100%;
+    height: 250px;
+  }
+  .tickets-tab {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    z-index: 2;
+    height: 100px;
+    padding: 10px;
+    margin: 0;
+  }
+  .tickets-tab div {
+    margin: 0;
+    bottom: 10px;
+  }
+  .tickets-tab div .select {
+    margin-bottom: 30px;
+  }
+  .tickets-tab .buy,
+  .tickets-tab .subtotal {
+    display: none;
+  }
+  .recommended h1 {
+    padding-top: 33px;
+    margin-left: 10px;
+  }
+  .recommended .recom-container .workshop-card {
+    display: flex;
+    flex-direction: row;
+    height: 180px;
+  }
+  .recommended .recom-container .workshop-card .workshop-details {
+    margin-left: 0;
+  }
+  .recommended .recom-container .workshop-card .workshop-details .btn-cart {
+    display: none;
+  }
+  .recommended .recom-container .workshop-card img {
+    width: 45%;
+  }
+  .recommended .recom-container .workshop-card .icon-container {
+    display: none;
+  }
+  .date-details .date-time .icon-container {
+    display: none;
+  }
+  .date-details .date-time .fa-clock,
+  .date-details .date-time .fa-calendar-minus,
+  .date-details .date-time p {
+    margin-top: 6px;
+  }
+  .recom-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .about-workshop {
+    margin-top: 10px;
+  }
+  .about-workshop .second {
+    margin-bottom: 37px;
+  }
+}
+
+.modal-cart {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  width: 30%;
+  position: absolute;
+  height: 100%;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  background-color: white;
+  overflow: scroll;
+  box-shadow: -1px -2px 16px rgba(127, 127, 127, 0.25);
+  animation: show 0.3s linear;
+  -webkit-animation: show 0.3s linear;
+  -moz-animation: show 0.3s linear;
+}
+
+.modal-cart .close-cart {
+  margin-left: 90%;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.modal-cart .mini-workshop {
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.modal-cart .mini-workshop img {
+  height: 150px;
+  width: 110px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.modal-cart .mini-workshop .info-title,
+.modal-cart .mini-workshop .info-price {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.modal-cart .mini-workshop .info-title h3,
+.modal-cart .mini-workshop .info-price h3 {
+  color: #0097cc;
+}
+
+.modal-cart .mini-workshop .info-title .far,
+.modal-cart .mini-workshop .info-price .far {
+  color: #7f7f7f;
+}
+
+.modal-cart .mini-workshop .info-title .euro-price,
+.modal-cart .mini-workshop .info-price .euro-price {
+  color: #1d1d1b;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#mini-select {
+  border: 1px solid #0097cc;
+  border-radius: 8px;
+  width: 55px;
+  height: 45px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.cart-status-msg {
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+
+.btn-checkout {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  padding: 18px;
+  width: 90%;
+  background-color: #0097cc;
+  border: none;
+  border-radius: 6px;
+  margin-left: 18px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+}
+
+.btn-checkout:hover {
+  cursor: pointer;
+}
+
+.subtotal-par {
+  color: #7f7f7f;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.subtotal-par,
+.total-price {
+  margin-left: 47px;
+  margin-top: 8px;
+}
+
+@keyframes show {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes hide {
+  0% {
+    right: 0;
+    opacity: 1;
+  }
+  100% {
+    right: -100px;
+    opacity: 0;
+  }
+}
+
+.checkout-modal {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  height: 250vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Fallback color */
+}
+
+.modal-body {
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 65%;
+  border-radius: 6px;
+  box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.25);
+}
+
+.title-checkout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 82px 100px 10px 94px;
+}
+
+.title-checkout .fa-times {
+  font-size: 23px;
+}
+
+.some-text {
+  padding: 10px 100px 10px 94px;
+  width: 70%;
+  color: #7f7f7f;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.form-div {
+  padding: 20px 100px 10px 94px;
+}
+
+.form-div form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-div form input {
+  margin-top: 5px;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid #0097cc;
+  margin-bottom: 35px;
+}
+
+.form-div form input ::placeholder {
+  color: #7f7f7f;
+  font-weight: lighter;
+}
+
+.form-div form label {
+  font-size: 14px;
+}
+
+.form-div form i {
+  border-bottom: 2px solid #0097cc;
+  padding-bottom: 12px;
+  padding-right: 6px;
+}
+
+.form-div form .date-gender {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-div form .date-gender input {
+  width: 260px;
+}
+
+.form-div form .date-gender .gender-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.check-div {
+  height: 32px;
+}
+
+.final-check {
+  width: 167px;
+  padding: 18.5px 42.5px;
+  background-color: #ffc80c;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.final-check:hover {
+  cursor: pointer;
+}

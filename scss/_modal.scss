@@ -1,0 +1,103 @@
+.modal-cart {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  width: 30%;
+  position: absolute;
+  height: 100%;
+  z-index: 5;
+  right: 0;
+  top: 0;
+  background-color: white;
+  overflow: scroll;
+  @include box-shadow(-1px, -2px, 16px, $ticket_shadow);
+  // overflow: visible;
+
+  .close-cart {
+    margin-left: 90%;
+    margin-top: 25px;
+    cursor: pointer;
+  }
+
+  @include call-animation(show, 0.3s, linear);
+
+  .mini-workshop {
+    background-color: $recommendations;
+    border-radius: 6px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    img {
+      height: 150px;
+      width: 110px;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    .info-title,
+    .info-price {
+      display: flex;
+      flex-direction: row;
+      margin: 20px;
+
+      h3 {
+        color: $title_category_clicked;
+      }
+
+      .far {
+        color: $light_text;
+      }
+
+      .euro-price {
+        color: $text;
+        margin-left: 20px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+#mini-select {
+  border: 1px solid #0097cc;
+  border-radius: 8px;
+  width: 55px;
+  height: 45px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.cart-status-msg {
+  margin-left: 60px;
+  margin-bottom: 30px;
+}
+
+.btn-checkout {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  padding: 18px;
+  width: 90%;
+  background-color: $checkout;
+  border: none;
+  border-radius: 6px;
+  margin-left: 18px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include box-shadow(1px, 2px, 8px, $ticket_shadow);
+}
+
+.subtotal-par {
+  color: $light_text;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.subtotal-par,
+.total-price {
+  margin-left: 47px;
+  margin-top: 8px;
+}

@@ -1,0 +1,11 @@
+@mixin box-shadow($x, $y, $blur, $z) {
+  -webkit-box-shadow: $x $y $blur $z;
+  -moz-box-shadow: $x $y $blur $z;
+  box-shadow: $x $y $blur $z;
+}
+
+@mixin call-animation($name, $duration, $timing) {
+  animation: $name $duration $timing;
+  -webkit-animation: $name $duration $timing;
+  -moz-animation: $name $duration $timing;
+}

@@ -1,0 +1,105 @@
+.checkout-modal {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  height: 250vh;
+
+  background-color: rgba(0, 0, 0, 0.6); /* Fallback color */
+}
+
+.modal-body {
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 65%;
+  //height: 200vh;
+  border-radius: 6px;
+  @include box-shadow(1px, 2px, 16px, $ticket_shadow);
+}
+
+.title-checkout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 82px 100px 10px 94px;
+
+  .fa-times {
+    font-size: 23px;
+  }
+}
+
+.some-text {
+  padding: 10px 100px 10px 94px;
+  width: 70%;
+  color: $light_text;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.form-div {
+  padding: 20px 100px 10px 94px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-top: 5px;
+      height: 40px;
+      border: none;
+      border-bottom: 2px solid $title_category_clicked;
+      margin-bottom: 35px;
+
+      ::placeholder {
+        color: $light_text;
+        font-weight: lighter;
+      }
+    }
+
+    label {
+      font-size: 14px;
+    }
+
+    i {
+      border-bottom: 2px solid $title_category_clicked;
+      padding-bottom: 12px;
+      padding-right: 6px;
+    }
+    .date-gender {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      input {
+        width: 260px;
+      }
+
+      .gender-column {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.check-div {
+  height: 32px;
+}
+
+.final-check {
+  width: 167px;
+  padding: 18.5px 42.5px;
+  background-color: $last_btn;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
